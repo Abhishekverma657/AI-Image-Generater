@@ -11,9 +11,13 @@ const app = express()
 const _dirname = path.resolve()
 
 app.use(express.json())
+const corsOption={
+  origin:'https://ai-image-generater-ez40.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials:true
+   }
 
-
-app.use(cors())
+app.use(cors(corsOption))
 
 await connectDB()
 app.use('/api/user', userRouter)
