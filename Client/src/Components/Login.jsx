@@ -33,7 +33,7 @@ const Login = () => {
 
           }
           else{
-            const {data}=   await axios.post(backendUrl+'/api/user/register',{ name,email,password})
+            const {data}=   await axios.post('https://ai-image-generater-ez40.onrender.com/api/user/register',{ name,email,password})
             if(data.success){
               setToken(data.token);
               setUser(data.user)
