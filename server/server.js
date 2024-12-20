@@ -12,7 +12,7 @@ const _dirname = path.resolve()
 
 app.use(express.json())
 const corsOption={
-  origin:'https://ai-image-generater-ez40.onrender.com',
+  origin:'https://ai-image-generater-aoxo.onrender.com',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials:true
    }
