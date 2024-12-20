@@ -13,7 +13,7 @@ import jwt from 'jsonwebtoken'
             req.body.userId=tokenDecode.id
          }
           else{
-            console.log("sfkhg")
+           
             return res.json({success:false, message:"Not Authorized, Login Again"});
           }
            next()
