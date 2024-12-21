@@ -37,7 +37,7 @@ const BuyCredit = () => {
 
       }
       
-    const {data}=   await axios.post(backendUrl+'/api/user/pay-razor',{planId},{
+    const {data}=   await axios.post('https://ai-image-generater-aoxo.onrender.com/api/user/pay-razor',{planId},{
         headers:{token}
       })
     

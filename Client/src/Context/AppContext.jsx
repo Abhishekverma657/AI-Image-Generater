@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
      const navigate=useNavigate()
      const loadCreditData=async()=>{
         try{
-             const {data}= await axios.get(backendUrl+'/api/user/credits',
+             const {data}= await axios.get('https://ai-image-generater-aoxo.onrender.com/api/user/credits',
                 {headers:{token }}
             )
              if(data.success){
@@ -31,7 +31,7 @@ import { useNavigate } from "react-router-dom";
       const  generareImage=async(prompt)=>{
          try
          {
-            const {data}= await axios.post(backendUrl+"/api/image/generate-image",{prompt},{
+            const {data}= await axios.post("https://ai-image-generater-aoxo.onrender.com/api/image/generate-image",{prompt},{
                 headers:{
                     token
                 }
