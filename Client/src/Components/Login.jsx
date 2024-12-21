@@ -16,7 +16,7 @@ const Login = () => {
         e.preventDefault()
         try{
           if(state==='Login'){
-          const {data}=   await axios.post(backendUrl+'/api/user/login',{email,password})
+          const {data}=   await axios.post('https://ai-image-generater-aoxo.onrender.com/api/user/login',{email,password})
           if(data.success){
             setToken(data.token);
             setUser(data.user)
@@ -33,7 +33,7 @@ const Login = () => {
 
           }
           else{
-            const {data}=   await axios.post( backendUrl+'/api/user/register',{ name,email,password})
+            const {data}=   await axios.post( 'https://ai-image-generater-aoxo.onrender.com/api/user/register',{ name,email,password})
             if(data.success){
               setToken(data.token);
               setUser(data.user)
